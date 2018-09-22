@@ -59,3 +59,30 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+table.maincontent{
+    width: 100%;
+    height: 94%;
+    position: absolute;
+    border: 0px;
+}
+
+table.maincontent tr td.heading{
+    background-color: #74b9ff;
+    width: 30%;
+    height: 100%;
+}
+
+table.maincontent tr td.content{
+    background-color: greenyellow;
+    width: 70%;
+    height: 100%;
+}
+
+h1.heading {
+    text-align: center;
+    font-size: 600%;
+    font-family: 'Kanit', sans-serif;
+    padding-right: 20%;
+    padding-left: 20%; 
+}
