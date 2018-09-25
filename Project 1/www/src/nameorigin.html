@@ -9,7 +9,9 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Materialize Sandbox</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <title>ชื่อเรียก</title>
+
 </head>
 
 <body>
@@ -30,7 +32,7 @@
 
     <!-- DROPDOWN -->
     <ul id="dropdown1" class="dropdown-content black lighten-1">
-        <li><a href="nameorigin.html">ชื่อเรียก</a></li>
+        <li><a href="nameorigin.html" class="white-text">ชื่อเรียก</a></li>
         <li><a href="history.html">ประวัติความเป็นมา</a></li>
         <li><a href="stereotype.html">การจำแนกกลุ่ม</a></li>
         <li><a href="socialstructure.html">โครงสร้างทางสังคม</a></li>
@@ -48,14 +50,60 @@
         </div>
     </nav>
 
-    <br><br>
+    <!-- contents -->
+    <div class="row">
+        <div class="col m4 red z-depth-1">
+
+        </div>
+        <div class="col m8 green slider_wrapper">
+            <div class="slider">
+                <ul class="slides transparent">
+                    <li>
+                        <div class="caption center-align">
+                            <h1>กะยัน กะจ้าง</h1>
+                            <h5 class="light grey-text text-lighten-3">เป็นคำที่ชาวกะเหรี่ยงใช้เรียกตนเองแทนคำว่า ปาดอง [ภาษาไทยใหญ่] 
+                                    สันนิษฐานว่ามาจากคำว่า “ป้ายทอง” ที่เกิดจากการพันคอด้วยทอง 
+                                    <br><br>โดยทั่วไป เราเรียกชาวกะเหรี่ยงว่า “ยาง” ดังนั้น ชนกลุ่มนี้จึงมีชื่อเต็มคือ “ยางปาดอง”</h5>
+                        </div>
+                    </li>
+                    <li>
+                        
+                        <div class="caption left-align">
+                            <h1>แลเคอ</h1>
+                            <h5 class="light grey-text text-lighten-3">เป็นชื่อที่ชาวคะยา (กระเหรี่ยงแดง) ใช้เรียกกลุ่มชนกะยัน 
+                                    <br><br>
+                                    แลเคอมีความหมายว่าตอนบนของลำธาร หรือขุนห้วย เป็นเพราะชาวกะยันอพยพมาจากทางต้นน้ำ</h5>
+                        </div>
+                    </li>
+                    <li>
+                        
+                        <div class="caption right-align">
+                            <h1>กะเหรี่ยงคอยาว</h1>
+                            <h5 class="light grey-text text-lighten-3">เป็นคำที่คนไทยใช้เรียกชนกลุ่มนี้
+                                    <br><br>
+                                    ยิ่งไปกว่านั้น คำว่ากะเหรี่ยงคอยาวได้ถูกนำไปแปลเป็นภาษาอังกฤษ</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
     <script>
+
         $(".button-collapse").sideNav();
+        $(".button-collapse").hover(true);
+        window_size = $(window).height();
+        $('.col').height(window_size-64);
+        // Init Slider
+        $('.slider').slider();
+        $('.slider').height(window_size-64);
+        $('.ul.slides').height(window_size-64);
+
     </script>
 </body>
 

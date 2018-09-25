@@ -5,7 +5,7 @@
     position: static;
     z-index: -1;
     /*TODO : move image x-position by screen size */
-}
+} 
 
 .centered {
     position: absolute;
@@ -13,4 +13,29 @@
     left: 70%;
     transform: translate(-50%, -50%);
     z-index: 9999;
+}
+
+html,body{
+    
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0%;
+}
+
+ul.slides {
+    
+    margin: 0px;
+}
+.col {
+    padding: 0px;
+}
+
+.slider_wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 50%;
+    padding-bottom: 50%;
 }
