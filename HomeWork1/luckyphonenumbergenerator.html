@@ -5,6 +5,7 @@
     </head>
     <body>
         <form>
+            <!-- KrittametK 6088063 -->
         <h1 align="center" id="header">Lucky Phone Number (Work)</h1>
         <p>Select Category 
             <select id="category" onchange="showtips()">
@@ -31,6 +32,7 @@
                 </select>
         </p>
         <p>Exclude This number</p>
+        <!-- Check box to exclude these number -->
         <input type="checkbox" id="exclude0" name="exclude" value="0" onchange="excludeListener(0)"><label for="coding">0</label>
         <input type="checkbox" id="exclude1" name="exclude" value="1" onchange="excludeListener(1)"><label for="coding">1</label>
         <input type="checkbox" id="exclude2" name="exclude" value="2" onchange="excludeListener(2)"><label for="coding">2</label>
@@ -46,7 +48,6 @@
         <br><br>
         <button type="button" onclick="getLucky()">Generate Number</button>
         <br><br>
-        <label id="error" value=""></label>
     </form>
         <script>
             var category_ref = document.getElementById("category")
@@ -54,12 +55,13 @@
             var generated_ref = document.getElementById("generated")
             var included_ref = document.getElementById("included")
             var cat_guide = document.getElementById("Category guide")
-            var excludeNum = [null,null,null,null,null,null,null,null,null,null]
-            var exclude_amount = 0
+            var excludeNum = [null,null,null,null,null,null,null,null,null,null]    //array of avoided number
+            var exclude_amount = 0                                                  //amount of avoided item
             var LuckyCollection;
 
-            showtips();
+            showtips(); //show the initial value
             
+            //show the set of lucky number
             function showtips(){
                 var category = category_ref.value
                 switch(category){
@@ -129,6 +131,7 @@
                     document.getElementById("generated").style = "color: green;"
                 }
                 else{
+                    //there is no possible lucky number from exclusion
                     document.getElementById("generated").innerText=" Error: there is no solution"
                     document.getElementById("generated").style = "color: red;"
                     document.getElementById("included").innerText="Error"
@@ -193,6 +196,7 @@
             }
 
             function checkboxdisabler(){
+                //disable the unchecked textbox when reach the limit
                 for(i = 0;i<10;i++){
                     if(excludeNum[i] == null){
                         switch(i){
@@ -212,6 +216,7 @@
             }
 
             function checkboxenabler(){
+                //enable the unchecked textbox when limit is not reached
                 for(i = 0;i<10;i++){
                     if(excludeNum[i] == null){
                         switch(i){

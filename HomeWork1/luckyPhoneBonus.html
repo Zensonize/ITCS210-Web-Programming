@@ -5,6 +5,7 @@
     </head>
     <body>
         <form>
+            <!-- KrittametK 6088063 -->
         <h1 align="center" id="header">Lucky Phone Number</h1>
         <p>Select Category 
             <select id="category" onchange="showtips()">
@@ -31,6 +32,7 @@
                 </select>
         </p>
         <p>Exclude This number</p>
+        <!-- Check box to exclude these number -->
         <input type="checkbox" id="exclude0" name="exclude" value="0" onchange="excludeListener(0)"><label for="coding">0</label>
         <input type="checkbox" id="exclude1" name="exclude" value="1" onchange="excludeListener(1)"><label for="coding">1</label>
         <input type="checkbox" id="exclude2" name="exclude" value="2" onchange="excludeListener(2)"><label for="coding">2</label>
@@ -55,13 +57,14 @@
             var included_ref = document.getElementById("included")
             var cat_guide = document.getElementById("Category guide")
             var soln_ref = document.getElementById("soln")
-            var excludeNum = [null,null,null,null,null,null,null,null,null,null]
-            var exclude_amount = 0
+            var excludeNum = [null,null,null,null,null,null,null,null,null,null]            //array of avoided number
+            var exclude_amount = 0                                                          //amount of avoided item
             var LuckyCollection;
             var iterationcount = 1;
 
-            showtips();
+            showtips(); //show the initial value
             
+            //show the set of lucky number
             function showtips(){
                 var category = category_ref.value
                 switch(category){
@@ -109,6 +112,7 @@
             }
 
             function getluckyhelper(){
+                //prevent too many iteration from no sum solution
                 var start = 0;
                 var overflow = false;
                 for(i = 0 ;i< 10;i++){
@@ -121,6 +125,7 @@
                     } 
                 }
             }
+
             function getLucky(){
                 var luckyidx
 
@@ -153,6 +158,7 @@
                     
                 }
                 else{
+                    //there is no lucky number available
                     document.getElementById("generated").innerText=" Error: there is no solution"
                     document.getElementById("generated").style = "color: red;"
                     document.getElementById("included").innerText="Error"
@@ -240,6 +246,7 @@
             }
 
             function checkboxdisabler(){
+                //disable the unchecked textbox when reach the limit
                 for(i = 0;i<10;i++){
                     if(excludeNum[i] == null){
                         switch(i){
@@ -259,6 +266,7 @@
             }
 
             function checkboxenabler(){
+                //enable the unchecked textbox when limit is not reached
                 for(i = 0;i<10;i++){
                     if(excludeNum[i] == null){
                         switch(i){
