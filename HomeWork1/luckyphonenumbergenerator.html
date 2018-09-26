@@ -1,0 +1,105 @@
+<!DOCTYPE htkml>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form>
+        <h1 align="center">Lucky Phone Number</h1>
+        <p>Select Category 
+            <select id="category" onchange="showtips()">
+                <option value="Work">Work</option>
+                <option value="Love">Love</option>
+                <option value="Wealth">Wealth</option>
+                <option value="Merchandising">Merchandising</option>
+                <option value="Technology">Technology</option>
+                <option value="Education/Wiseness">Education/Wiseness</option>
+            </select>
+        </p>
+        <label id="Category guide" value=""></label>
+        <p>Select Phone Code
+                <select id="phonecode">
+                        <option value="081">081</option>
+                        <option value="082">082</option>
+                        <option value="083">083</option>
+                        <option value="084">084</option>
+                        <option value="085">085</option>
+                        <option value="086">086</option>
+                        <option value="087">087</option>
+                        <option value="088">088</option>
+                        <option value="089">089</option>
+                </select>
+        </p>
+        <p>Your number is <label id="generated" value="" style="color: green"></label></p>
+        <p>Which included <label id="included" value=""></label></p>
+        <button type="button" onclick="getLucky()">Generate Number</button>
+        
+    </form>
+        <script>
+            var category_ref = document.getElementById("category")
+            var phonecode_ref = document.getElementById("phonecode")
+            var generated_ref = document.getElementById("generated")
+            var included_ref = document.getElementById("included")
+            var cat_guide = document.getElementById("Category guide")
+            var LuckyCollection;
+
+            showtips();
+            
+            function showtips(){
+                var category = category_ref.value
+                switch(category){
+                    case "Work": 
+                        cat_guide.innerText= "the number will contain: 45 46 78 | 87 39 93 | 56"; 
+                        LuckyCollection = [45, 46, 78, 87, 39, 93, 56];
+                        break;
+                    case "Love": 
+                        cat_guide.innerText= "the number will contain: 32 24 62 | 36 63 69 | 96"; 
+                        LuckyCollection = [32, 24, 62, 36, 63, 69, 96];
+                        break;
+                    case "Wealth": 
+                        cat_guide.innerText= "the number will contain: 28 82 45 | 54 65 56 | 78"; 
+                        LuckyCollection = [28, 82, 45, 54, 65, 56, 78];
+                        break;
+                    case "Merchandising": 
+                        cat_guide.innerText= "the number will contain: 44 22 41 | 16 61 26 | 42"; 
+                        LuckyCollection = [44, 22, 41, 16, 61, 26, 42];
+                        break;
+                    case "Technology": 
+                        cat_guide.innerText= "the number will contain: 98 89 99 | 59 95 91 | 19"; 
+                        LuckyCollection = [98, 89, 99, 59, 95, 91,19];
+                        break;
+                    case "Education/Wiseness": 
+                        cat_guide.innerText= "the number will contain: 15 51 14 | 41 55 39 | 23"; 
+                        LuckyCollection = [15, 51, 14, 41, 55, 39, 23];
+                        break;
+                }
+            }
+
+            //generate random number
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+
+            function getLucky(){
+                generated_ref.innerText=phonecode_ref.value
+                //select the lucky number from array
+                var luckyidx = getRandomInt(LuckyCollection.length);
+
+                //show the selected lucky number
+                included_ref.innerText=String(LuckyCollection[luckyidx])
+
+                //random position where to put lucky number in
+                var pasteluckyposition = getRandomInt(5);
+                
+                //put random number into phone number
+                for(i = 0 ;i < 6;i++){
+                    if (i == pasteluckyposition){
+                        generated_ref.innerText=generated_ref.innerText+ String(LuckyCollection[luckyidx])
+                    }
+                    else generated_ref.innerText=generated_ref.innerText+ String(getRandomInt(9))
+                }
+            }
+
+        </script>
+    </body>
+</html>
