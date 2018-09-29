@@ -37,6 +37,7 @@
         <li><a href="job.html">อาชีพ</a></li>
         <li><a href="rituals.html">ประเพณีพิธีกรรม</a></li>
     </ul>
+    <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper black lighten-1">
             <a href="home.html" class="brand-logo left">Logo</a>
@@ -47,14 +48,14 @@
             </ul>
         </div>
     </nav>
-
+</div>
     <div class="row">
-        <div class="col m4 grey darken-3 hide-on-small-only">
+        <div class="col m4 grey darken-3 hide-on-small-only side-header" style="position: fixed;">
 
         </div>
-        <div class="col s12 m8 grey darken-4">
+        <div class="col s12 m8 grey darken-4 offset-m4">
             <div class="container">
-                
+                <h1>ถิ่นฐานดั้งเดิมอยู่ที่มองโกเลีย (3600 ปี) บางแห่งบอกว่าอยู่ที่ตอนกลางมณฑลยูนหนานของประเทศจีน</h1>
             </div>
         </div>
     </div>
@@ -65,6 +66,9 @@
 
     <script>
         $(".button-collapse").sideNav();
+        var height = $(".side-header").height;
+        console.log(height)
+        $(".side-header").height($(window).height());
     </script>
 </body>
 
