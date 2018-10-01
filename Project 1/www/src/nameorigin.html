@@ -58,7 +58,28 @@
         </div>
         <div class="col s12 m8 offset-m4 content-Container">
             <!--Your Contents Here-->
-            
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item left">
+                  <a class="btn waves-effect transparent white-text" onclick="nextpanel(1)"><i class="large material-icons">keyboard_arrow_left</i></a>
+                  <a class="btn waves-effect transparent white-text" onclick="nextpanel(-1)"><i class="large material-icons">keyboard_arrow_right</i></a>
+                </div>
+                <div class="carousel-item red white-text" href="#one!">
+                  <h2>First Panel</h2>
+                  <p class="white-text">This is your first panel</p>
+                </div>
+                <div class="carousel-item amber white-text" href="#two!">
+                  <h2>Second Panel</h2>
+                  <p class="white-text">This is your second panel</p>
+                </div>
+                <div class="carousel-item green white-text" href="#three!">
+                  <h2>Third Panel</h2>
+                  <p class="white-text">This is your third panel</p>
+                </div>
+                <div class="carousel-item blue white-text" href="#four!">
+                  <h2>Fourth Panel</h2>
+                  <p class="white-text">This is your fourth panel</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -75,6 +96,30 @@
         //set title div to fit display height
         window_size = $(window).height();
         $('.topictitle').height(window_size - 64);
+        //enable carousel
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: false,
+            duration: 200
+        });
+        //set height of carousel respect to display height
+        $('.carousel').height(window_size - 64);
+        //use button to move carousel panel
+        function nextpanel(direction){
+            
+            if(direction == 1) {
+                $('.carousel.carousel-slider').carousel('prev');
+            }
+            else{
+                $('.carousel.carousel-slider').carousel('next');
+            }
+        }
+        //test on screen resize function
+        $(window).resize(function(){
+            window_size = $(window).height();
+            $('.carousel').height(window_size - 64);
+            $('.topictitle').height(window_size - 64);
+        });
     </script>
 </body>
 
