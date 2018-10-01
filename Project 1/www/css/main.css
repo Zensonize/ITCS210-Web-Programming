@@ -6,6 +6,22 @@
     z-index: -1;
     /*TODO : move image x-position by screen size */
 } 
+.dropdown-content {
+    background-color: #000000;
+}
+
+.dropdown-content li a {
+    color: #ffffff;
+}
+
+.topictitle {
+    position: fixed;
+    background-color: #424242;
+}
+
+.content-Container {
+    background-color: #212121;
+}
 
 .centered {
     position: absolute;
