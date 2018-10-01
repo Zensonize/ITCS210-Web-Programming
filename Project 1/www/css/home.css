@@ -89,7 +89,7 @@ h1.heading {
 
 /* Addtional */
 body {
-    background-image: src="../img/background.jpg";
+    background-image: url('file:///C:\Users\lenovo\Desktop\project1-workspace\Project 1\www\img\background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #333;
