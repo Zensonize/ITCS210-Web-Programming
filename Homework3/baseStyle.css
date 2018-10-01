@@ -14,6 +14,9 @@ h1 {
 img{
     height: 200px;
     width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h4, h5, h6{
@@ -30,4 +33,13 @@ table tr td h4{
     margin-left: 5%;
 }
 
-
+#wrapper .text {
+    position:relative;
+    bottom:10px;
+    text-align: center;
+    visibility:hidden;
+}
+    
+#wrapper:hover .text {
+    visibility:visible;
+}
