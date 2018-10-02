@@ -6,13 +6,12 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-
+    <!--Import Self Customized CSS-->
+    <link rel="stylesheet" href="../css/main.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--Import External Style Sheet-->
-    <link rel="stylesheet" href="../css/main.css">
-    <title>Materialize Sandbox</title>
+    
+    <title>การจำแนกกลุ่ม</title>
 </head>
 
 <body>
@@ -32,7 +31,7 @@
 
 
     <!-- DROPDOWN -->
-    <ul id="dropdown1" class="dropdown-content nav-dropdown">
+    <ul id="dropdown-nav" class="dropdown-content">
         <li><a href="nameorigin.html">ชื่อเรียก</a></li>
         <li><a href="history.html">ประวัติความเป็นมา</a></li>
         <li><a href="stereotype.html">การจำแนกกลุ่ม</a></li>
@@ -40,105 +39,25 @@
         <li><a href="job.html">อาชีพ</a></li>
         <li><a href="rituals.html">ประเพณีพิธีกรรม</a></li>
     </ul>
-    <nav>
-        <div class="nav-wrapper black lighten-1">
-            <a href="home.html" class="brand-logo left">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="" class="dropdown-button" data-activates="dropdown1">Topics<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="contactus.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="row contentswrapper">
-        <div class="col m4 grey darken-3 hide-on-small-only">
-
-        </div>
-        <div class="col s12 m8 grey darken-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                        <h1>ชนเผ่าสาขาใหญ่</h1>
-                    </div>
-                    <div class="col s12 m6 l6">
-                        <h1>สะกอ</h1>
-                    </div>
-                    <div class="col s12 m6 l6">
-                        <h1>โป</h1>
-                    </div>
-                    <div class="col s12 m6 l6">
-                        <h1>ปาโอ</h1>
-                    </div>
-                    <div class="col s12 m6 l6">
-                        <h1>คะยา</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                        <h1>ชนเผ่าสาขาย่อย</h1>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <h1>ปากู</h1>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <h1>บเวตะวันตก</h1>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <h1>ปาดอง / กะยัน</h1>
-                    </div>
-                    <div class="col s12 m6 l4 offset-l2">
-                        <h1>เกโก</h1>
-                    </div>
-                    <div class="col s12 m6 l4 offset-m3 ">
-                        <h1>ยินบาว</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m12 l12">
-                        <h3>ชาวกะเหรี่ยง</h3>
-                    </div>
-                    <div class="col s4 m4 l4">
-                        <div class="row">
-                            <div class="col s12 m12 l12">
-                                <h4>ชาวกะเหรี่ยงไต้</h4>
-                            </div>
-                            <div class="col s12 m6 l6">
-                                <h5>โป</h5>
-                            </div>
-                            <div class="col s12 m6 l6">
-                                <h5>สะกอ</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s4 m4 l4">
-                        <div class="row">
-                            <div class="col s12 m12 l12">
-                                <h4>ชาวกะเหรี่ยงกลาง</h4>
-                            </div>
-                            <div class="col s12 m6 l4">
-                                <h5>คะยา</h5>
-                            </div>
-                            <div class="col s12 m6 l4">
-                                <h5>ปาดอง / กะยัน</h5>
-                            </div>
-                            <div class="col s12 m6 l4 offset-m3">
-                                <h5>บเว</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s4 m4 l4">
-                        <div class="row">
-                            <div class="col s12 m12 l12">
-                                <h4>ชาวกะเหรี่ยงเหนือ</h4>
-                            </div>
-                            <div class="col s12 m12 l12">
-                                <h5>ปาโอ</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper black lighten-1">
+                <a href="home.html" class="brand-logo left">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-small-only">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="" class="dropdown-button" data-activates="dropdown-nav">Topics<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
             </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col m4 hide-on-small-only topictitle">
+
+        </div>
+        <div class="col s12 m8 offset-m4 content-Container">
+            <!--Your Contents Here-->
+            
         </div>
     </div>
 
@@ -148,9 +67,13 @@
 
     <script>
         $(".button-collapse").sideNav();
+        //enable navbar dropdown on hover
         $('.dropdown-button').dropdown({
-            "hover":true
+            'hover': true
         });
+        //set title div to fit display height
+        window_size = $(window).height();
+        $('.topictitle').height(window_size - 64);
     </script>
 </body>
 
