@@ -1,0 +1,22 @@
+.jumbotron {
+    background-image: url('DSC_0127.jpg');
+    background-size: cover;
+    background-position-y: 50%;
+    height: 300px;
+}
+
+#skills {
+    background-image: url('6AmmIGhT13N9Vm.jpg');
+    background-size: cover;
+    background-position-y: 30%;
+    background-position-x: 5%;
+    height: 200px;
+}
+
+#experience {
+    background-image: url('DSC_6889.jpg');
+    background-size: cover;
+    background-position-y: 30%;
+    background-position-x: 5%;
+    height: 500px;
+}
