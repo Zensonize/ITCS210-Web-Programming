@@ -7,6 +7,27 @@
     /*TODO : move image x-position by screen size */
 } 
 
+/* style dropdown box of navigation bar */
+.dropdown-content {
+    background-color: #000000;
+}
+
+/* style the a tag of dropdown box of navigation bar */
+.dropdown-content li a {
+    color: #ffffff;
+}
+
+/* style the topic title section and fixed it to the screen */
+.topictitle {
+    position: fixed;
+    background-color: #424242;
+}
+
+/* style the main content section */
+.content-Container {
+    background-color: #212121;
+}
+
 .centered {
     position: absolute;
     top: 40%;

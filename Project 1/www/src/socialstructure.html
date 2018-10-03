@@ -6,16 +6,12 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-
+    <!--Import Self Customized CSS-->
+    <link rel="stylesheet" href="../css/main.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Materialize Sandbox</title>
 
-    <!-- AOM -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>โครงสร้างทางสังคม</title>
 </head>
 
 <body>
@@ -35,7 +31,7 @@
 
 
     <!-- DROPDOWN -->
-    <ul id="dropdown1" class="dropdown-content black lighten-1">
+    <ul id="dropdown-nav" class="dropdown-content">
         <li><a href="nameorigin.html">ชื่อเรียก</a></li>
         <li><a href="history.html">ประวัติความเป็นมา</a></li>
         <li><a href="stereotype.html">การจำแนกกลุ่ม</a></li>
@@ -43,89 +39,78 @@
         <li><a href="job.html">อาชีพ</a></li>
         <li><a href="rituals.html">ประเพณีพิธีกรรม</a></li>
     </ul>
-    <nav>
-        <div class="nav-wrapper black lighten-1">
-            <a href="home.html" class="brand-logo left">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="" class="dropdown-button" data-activates="dropdown1">Topics<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href="contactus.html">Contact</a></li>
-            </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper black lighten-1">
+                <a href="home.html" class="brand-logo left">Logo</a>
+                <ul id="nav-mobile" class="right hide-on-small-only">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="" class="dropdown-button" data-activates="dropdown-nav">Topics<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col m4 hide-on-small-only topictitle">
+
         </div>
-    </nav>
+        <div class="col s12 m8 offset-m4 content-Container">
+            <!--Your Contents Here-->
+            <p class="topicSub">ครอบครัว</p>
+            <div class="col l6" style="padding: 30px;">
+                <p class="text">
+                    <div class="contentSub1">การแต่งงาน</div><br>
+                    <div class="contentSub2">ชาวกะเหรี่ยงแต่งงานตอนอายุน้อยทั้งสองฝ่ายต้องทำการสัญญาว่า
+                        จะรักและดูแลกันเป็นอย่างดี ในอดีต หลังจากแต่งงานแล้วฝ่ายหญิงกับฝ่ายชายจะแยกกันอยู่
+                        เป็นเวลา 1 เดือน แต่สำหรับในปัจจุบันทั้งฝ่ายหญิงย้ายไปกับฝ่ายชายได้เลย
+                        และชาวกะเหรี่ยงนิยมการมีลูกจำนวนมาก<br></div>
+                </p>
 
-    <!-- Aom -->
-    <div class="container-fluid">
-
-        <div class="row bgRow">
-
-            <div class="col l4 hide-on-small-only">
-                <p class="topic">โครงสร้างทางสังคม</p>
+            </div>
+            <div class="col l6" style="padding: 30px;">
+                <p class="text">
+                    <div class="contentSub1">การหย่าร้าง</div><br>
+                    <div class="contentSub2">
+                        จะมีผู้อาวุโสเป็นคนตัดสินคดีความนั้นให้ ซึ่งในกรณีผู้ชายนอกใจผู้หญิง ฝ่ายชายต้องชดใช้
+                        ค่าสินไหมให้แก่พ่อแม่ฝ่ายหญิงพร้อมกับยกบุตรให้อีกฝ่ายดูแล แต่ถ้าฝ่ายหญิงเป็นฝ่ายนอกใจ
+                        ต้องชดใช้ให้มีมูลค่าเท่ากับของที่ฝ่ายหญิงได้จากฝ่ายชายเมื่อวันแต่งงาน
+                        พร้อมกับยกลูกให้ฝ่ายชายดูแล<br></div>
+                </p>
+            </div>
+            <div class="col l12" style="padding: 30px;">
+                <p class="text">
+                    <div class="contentSub1">การมีลูก</div><br>
+                    <div class="contentSub2">เมื่อมีลูกคนแรกออกมาจะมีคุณย่าคุณยายที่ทำคลอดให้แต่ลูกคนสองอาจ<br>เป็นบิดาหรือหมอตำแหยที่ทำคลอดให้
+                        ทุกคนจะช่วยเลี้ยงดูอบรมสั่งสอน แล้วเมื่อบุตรโตขึ้นถึงจะแยกย้ายไปอยู่ต่างบ้านใกล้กัน</div>
+                </p>
             </div>
 
-            <center>
-                <div class="col l8 content">
-                    <p class="topicSub">ครอบครัว</p>
-                    <div class="col l6" style="padding: 30px;">
-                        <p class="text" ><div class="contentSub1">การแต่งงาน</div><br>
-                            <div class="contentSub2">ชาวกะเหรี่ยงแต่งงานตอนอายุน้อยทั้งสองฝ่ายต้องทำการสัญญาว่า
-                            จะรักและดูแลกันเป็นอย่างดี ในอดีต หลังจากแต่งงานแล้วฝ่ายหญิงกับฝ่ายชายจะแยกกันอยู่
-                            เป็นเวลา 1 เดือน แต่สำหรับในปัจจุบันทั้งฝ่ายหญิงย้ายไปกับฝ่ายชายได้เลย
-                            และชาวกะเหรี่ยงนิยมการมีลูกจำนวนมาก<br></div>
-                        </p>
+            <div class="col l12" style="padding: 30px;">
+                <p class="topicSub">หมู่บ้าน</p>
+                <div class="col l6" style="padding: 30px;">
+                    <p class="text">
+                        <div class="contentSub1">ในพม่า</div><br>
+                        <div class="contentSub2">หมู่บ้านชาวกะยันมีความอิสระมากๆ
+                            จะถูกปกครองดูแลโดยกลุ่มผู้สูงอายุและหัวหน้าหมู่บ้าน
+                            ซึ่งทุกคนต้องประพฤติตนให้อยู่ในระเบียบ ชาวบ้านมีความรักใคร่กลมเกลียวกัน มีความปรองดอง
+                            เมื่อมีงานสำคัญก็จะช่วยกันทำ
+                            เช่น เมื่อคนใดคนหนึ่งสร้างบ้านก้จะมีชาวบ้านอีกหลายคนมาช่วยกัน</div>
 
-                    </div>
-                    <div class="col l6" style="padding: 30px;">
-                        <p class="text"><div class="contentSub1">การหย่าร้าง</div><br>
-                            <div class="contentSub2">
-                            จะมีผู้อาวุโสเป็นคนตัดสินคดีความนั้นให้ ซึ่งในกรณีผู้ชายนอกใจผู้หญิง ฝ่ายชายต้องชดใช้
-                            ค่าสินไหมให้แก่พ่อแม่ฝ่ายหญิงพร้อมกับยกบุตรให้อีกฝ่ายดูแล แต่ถ้าฝ่ายหญิงเป็นฝ่ายนอกใจ
-                            ต้องชดใช้ให้มีมูลค่าเท่ากับของที่ฝ่ายหญิงได้จากฝ่ายชายเมื่อวันแต่งงาน
-                            พร้อมกับยกลูกให้ฝ่ายชายดูแล<br></div>
-                        </p>
-                    </div>
-                    <div class="col l12" style="padding: 30px;">
-                        <p class="text"><div class="contentSub1">การมีลูก</div><br>
-                            <div class="contentSub2">เมื่อมีลูกคนแรกออกมาจะมีคุณย่าคุณยายที่ทำคลอดให้แต่ลูกคนสองอาจ<br>เป็นบิดาหรือหมอตำแหยที่ทำคลอดให้
-                            ทุกคนจะช่วยเลี้ยงดูอบรมสั่งสอน แล้วเมื่อบุตรโตขึ้นถึงจะแยกย้ายไปอยู่ต่างบ้านใกล้กัน</div>
-                        </p>
-                    </div>
-                  
-                        <div class="col l12"style="padding: 30px;" >
-                            <p class="topicSub">หมู่บ้าน</p>
-                            <div class="col l6" style="padding: 30px;">
-                                <p class="text"><div class="contentSub1">ในพม่า</div><br>
-                                    <div class="contentSub2">หมู่บ้านชาวกะยันมีความอิสระมากๆ จะถูกปกครองดูแลโดยกลุ่มผู้สูงอายุและหัวหน้าหมู่บ้าน
-                                    ซึ่งทุกคนต้องประพฤติตนให้อยู่ในระเบียบ ชาวบ้านมีความรักใคร่กลมเกลียวกัน มีความปรองดอง เมื่อมีงานสำคัญก็จะช่วยกันทำ
-                                    เช่น เมื่อคนใดคนหนึ่งสร้างบ้านก้จะมีชาวบ้านอีกหลายคนมาช่วยกัน</div>
-
-                                </p>
-                            </div>
-                            <div class="col l6" style="padding: 30px;">
-                                <p class="text"><div class="contentSub1">ในไทย</div><br>
-                                    <div class="contentSub2">การปกครองของชาวกะยันในไทยจะมีความตล้ายคลึงกับการปกครองในพม่า
-                                    เมื่อมีการทะเลาะกันหรือมีเรื่องเดือดร้อน
-                                    ผู้ใหญ่บ้านจะรายงานให้ประธานทราบและชาวกะยันทุกคนต้องทำตามกฎที่
-                                    เขียนใส่กระดาษไรเนียวทุกประการ</div>
-                                </p>
-                            </div>
-                        </div>
-                   
+                    </p>
                 </div>
-
-            </center>
+                <div class="col l6" style="padding: 30px;">
+                    <p class="text">
+                        <div class="contentSub1">ในไทย</div><br>
+                        <div class="contentSub2">การปกครองของชาวกะยันในไทยจะมีความตล้ายคลึงกับการปกครองในพม่า
+                            เมื่อมีการทะเลาะกันหรือมีเรื่องเดือดร้อน
+                            ผู้ใหญ่บ้านจะรายงานให้ประธานทราบและชาวกะยันทุกคนต้องทำตามกฎที่
+                            เขียนใส่กระดาษไรเนียวทุกประการ</div>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -133,6 +118,13 @@
 
     <script>
         $(".button-collapse").sideNav();
+        //enable navbar dropdown on hover
+        $('.dropdown-button').dropdown({
+            'hover': true
+        });
+        //set title div to fit display height
+        window_size = $(window).height();
+        $('.topictitle').height(window_size - 64);
     </script>
 </body>
 
