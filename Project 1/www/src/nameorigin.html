@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>ชื่อเรียก</title>
 
 </head>
@@ -21,7 +22,7 @@
         <div class="fixed-action-btn">
             <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
             <ul>
-                <li><a href="#" class="btn-floating yellow btn-large"><i class="large material-icons">insert_chart</i></a></li>
+                <li><a href="#" class="btn-floating yellow btn-large" id="myBtn"><i class="large material-icons">insert_chart</i></a></li>
                 <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
                 <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
                 <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
@@ -53,29 +54,90 @@
         </nav>
     </div>
     <div class="row">
-        <div class="col m4 hide-on-small-only topictitle">
-
+        <div class="col m4 hide-on-small-only topictitle valign-wrapper">
+            <h1 class="rotate-270">ชื่อเรียก</h1>
         </div>
         <div class="col s12 m8 offset-m4 content-Container">
             <!--Your Contents Here-->
-            
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item left">
+                    <a class="btn waves-effect transparent white-text" onclick="nextpanel(1)"><i class="large material-icons">keyboard_arrow_left</i></a>
+                    <a class="btn waves-effect transparent white-text" onclick="nextpanel(-1)"><i class="large material-icons">keyboard_arrow_right</i></a>
+                </div>
+                <div class="carousel-item red white-text" href="#one!">
+                    <div class="container">
+                        <h1>กะยัน กะจ้าง</h1>
+                        <p class="white-text">เป็นคำที่ชาวกะเหรี่ยงใช้เรียกตนเองแทนคำว่า ปาดอง [ภาษาไทยใหญ่]
+                            สันนิษฐานว่ามาจากคำว่า “ป้ายทอง” ที่เกิดจากการพันคอด้วยทอง
+                            <br><br>โดยทั่วไป เราเรียกชาวกะเหรี่ยงว่า “ยาง” ดังนั้น ชนกลุ่มนี้จึงมีชื่อเต็มคือ
+                            “ยางปาดอง”</p>
+                    </div>
+                </div>
+                <div class="carousel-item amber white-text" href="#two!">
+                    <div class="container">
+                        <h1>แลเคอ</h1>
+                        <p class="white-text">เป็นชื่อที่ชาวคะยา (กระเหรี่ยงแดง) ใช้เรียกกลุ่มชนกะยัน
+                            <br><br>
+                            แลเคอมีความหมายว่าตอนบนของลำธาร หรือขุนห้วย เป็นเพราะชาวกะยันอพยพมาจากทางต้นน้ำ</p>
+                    </div>
+                </div>
+                <div class="carousel-item green white-text" href="#three!">
+                    <div class="container">
+                        <h1>กะเหรี่ยงคอยาว</h1>
+                        <p class="white-text">เป็นคำที่คนไทยใช้เรียกชนกลุ่มนี้
+                            <br><br>
+                            ยิ่งไปกว่านั้น คำว่ากะเหรี่ยงคอยาวได้ถูกนำไปแปลเป็นภาษาอังกฤษ</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-    <script>
-        $(".button-collapse").sideNav();
-        //enable navbar dropdown on hover
-        $('.dropdown-button').dropdown({
-            'hover': true
-        });
-        //set title div to fit display height
-        window_size = $(window).height();
-        $('.topictitle').height(window_size - 64);
-    </script>
+        <script>
+            $(".button-collapse").sideNav();
+            //enable navbar dropdown on hover
+            $('.dropdown-button').dropdown({
+                'hover': true
+            });
+            //set title div to fit display height
+            window_size = $(window).height();
+            $('.topictitle').height(window_size - 64);
+            //enable carousel
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true,
+                indicators: false,
+                duration: 400
+            });
+            //set height of carousel respect to display height
+            $('.carousel').height(window_size - 64);
+            //use button to move carousel panel
+            function nextpanel(direction) {
+
+                if (direction == 1) {
+                    $('.carousel.carousel-slider').carousel('prev');
+                } else {
+                    $('.carousel.carousel-slider').carousel('next');
+                }
+            }
+            //test on screen resize function
+            $(window).resize(function () {
+                window_size = $(window).height();
+                $('.carousel').height(window_size - 64);
+                $('.topictitle').height(window_size - 64);
+            });
+            //enable carousel cycle
+            window.setInterval(function () {
+                nextpanel(-1);
+            }, 4000);
+
+            //toggle grayscale
+            $('#myBtn').click(function(){
+                $('body').toggleClass('bw');
+            })
+        </script>
 </body>
 
 </html>

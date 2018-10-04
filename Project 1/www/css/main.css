@@ -86,21 +86,17 @@
     align-items: center;
 }
 
+.slider_wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
 
+.bw {
+    filter: saturate(0);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.rotate-270 {
+    transform: rotate(-90deg);
+}
