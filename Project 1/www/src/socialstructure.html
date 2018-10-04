@@ -52,10 +52,11 @@
         </nav>
     </div>
     <div class="row main-display">
-        <div class="col m4 hide-on-small-only topictitle">
-            <div class="topTopic">โครงสร้างทางสังคม</div>
+        <div class="col m3 hide-on-small-only topictitle valign-wrapper">
+            <div class="topTopic rotate-270 center-align" style="padding: 0px">
+                โครงสร้างทางสังคม</div>
         </div>
-        <div class="col s12 m8 offset-m4 content-Container content" >
+        <div class="col s12 m9 offset-m3 content-Container content" >
             <!--Your Contents Here-->
             <p class="topicSub center-align">ครอบครัว</p>
             <div class="col l6" style="padding: 30px;">
@@ -130,6 +131,33 @@
         //set title div to fit display height
         window_size = $(window).height();
         $('.topictitle').height(window_size - 64);
+        //enable carousel
+        $('.carousel.carousel-slider').carousel({
+                fullWidth: true,
+                indicators: false,
+                duration: 400
+            });
+         //set height of carousel respect to display height
+         $('.carousel').height(window_size - 64);
+            //use button to move carousel panel
+            function nextpanel(direction) {
+
+                if (direction == 1) {
+                    $('.carousel.carousel-slider').carousel('prev');
+                } else {
+                    $('.carousel.carousel-slider').carousel('next');
+                }
+            }
+        //test on screen resize function
+        $(window).resize(function () {
+                window_size = $(window).height();
+                $('.carousel').height(window_size - 64);
+                $('.topictitle').height(window_size - 64);
+            });
+        //enable carousel cycle
+        window.setInterval(function () {
+                nextpanel(-1);
+            }, 4000);
 
         //toggle grayscale
         $('#myBtn').click(function(){

@@ -22,7 +22,7 @@
         <div class="fixed-action-btn">
             <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
             <ul>
-                <li><a href="#" class="btn-floating yellow btn-large"  id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
+                <li><a href="#" class="btn-floating yellow btn-large" id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
                 <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
                 <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
                 <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
@@ -53,18 +53,18 @@
             </div>
         </nav>
     </div>
-    <div class="row">
-        <div class="col m4 hide-on-small-only topictitle valign-wrapper">
-            <h1 class="rotate-270">ชื่อเรียก</h1>
+    <div class="row main-display">
+        <div class="col m3 hide-on-small-only topictitle valign-wrapper">
+            <h1 class="topTopic rotate-270" style="padding: 100px">ชื่อเรียก</h1>
         </div>
-        <div class="col s12 m8 offset-m4 content-Container">
+        <div class="col s12 m9 offset-m3 content-Container">
             <!--Your Contents Here-->
             <div class="carousel carousel-slider center">
-                <div class="carousel-fixed-item left">
-                    <a class="btn waves-effect transparent white-text" onclick="nextpanel(1)"><i class="large material-icons">keyboard_arrow_left</i></a>
-                    <a class="btn waves-effect transparent white-text" onclick="nextpanel(-1)"><i class="large material-icons">keyboard_arrow_right</i></a>
+                <div class="carousel-fixed-item left ">
+                    <a class="btn waves-effect transparent white-text yellow darken-3" onclick="nextpanel(1)"><i class="large material-icons">keyboard_arrow_left</i></a>
+                    <a class="btn waves-effect transparent white-text yellow darken-3" onclick="nextpanel(-1)"><i class="large material-icons">keyboard_arrow_right</i></a>
                 </div>
-                <div class="carousel-item red white-text" href="#one!">
+                <div class="carousel-item grey darken-4 white-text" href="#one!">
                     <div class="container">
                         <h1>กะยัน กะจ้าง</h1>
                         <p class="white-text">เป็นคำที่ชาวกะเหรี่ยงใช้เรียกตนเองแทนคำว่า ปาดอง [ภาษาไทยใหญ่]
@@ -72,22 +72,47 @@
                             <br><br>โดยทั่วไป เราเรียกชาวกะเหรี่ยงว่า “ยาง” ดังนั้น ชนกลุ่มนี้จึงมีชื่อเต็มคือ
                             “ยางปาดอง”</p>
                     </div>
+                    <div class="container">
+                        <img class="responsive-img" src="image/19.jpg">
+                    </div>
+
                 </div>
-                <div class="carousel-item amber white-text" href="#two!">
+                <div class="carousel-item grey darken-4 white-text" href="#two!">
                     <div class="container">
                         <h1>แลเคอ</h1>
                         <p class="white-text">เป็นชื่อที่ชาวคะยา (กระเหรี่ยงแดง) ใช้เรียกกลุ่มชนกะยัน
                             <br><br>
                             แลเคอมีความหมายว่าตอนบนของลำธาร หรือขุนห้วย เป็นเพราะชาวกะยันอพยพมาจากทางต้นน้ำ</p>
                     </div>
+                    <div class="container">
+                        <div class="col s12 m6">
+                            <img class="responsive-img" src="image/16.jpg">
+                        </div>
+                        <div class="col s12 m6">
+                            <img class="responsive-img" src="image/18.jpg">
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-item green white-text" href="#three!">
+                <div class="carousel-item grey darken-4 white-text" href="#three!">
                     <div class="container">
                         <h1>กะเหรี่ยงคอยาว</h1>
                         <p class="white-text">เป็นคำที่คนไทยใช้เรียกชนกลุ่มนี้
                             <br><br>
                             ยิ่งไปกว่านั้น คำว่ากะเหรี่ยงคอยาวได้ถูกนำไปแปลเป็นภาษาอังกฤษ</p>
                     </div>
+                    
+                        <div class="col s12 m4">
+                            <img class="responsive-img" src="image/22.jpg">
+                        </div>
+                        <div class="col s12 m4">
+                            <img class="responsive-img" src="image/23.jpg"><br>
+                        </div>
+
+                        <div class="col s12 m4">
+                            <img class="responsive-img"  src="image/24.jpg">
+                        </div>
+
+                    
                 </div>
             </div>
         </div>
@@ -134,7 +159,7 @@
             }, 4000);
 
             //toggle grayscale
-            $('#myBtn').click(function(){
+            $('#myBtn').click(function () {
                 $('body').toggleClass('bw');
             })
         </script>

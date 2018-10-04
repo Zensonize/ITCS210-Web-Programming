@@ -20,7 +20,7 @@
         <div class="fixed-action-btn">
             <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
             <ul>
-                <li><a href="#" class="btn-floating yellow btn-large"  id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
+                <li><a href="#" class="btn-floating yellow btn-large" id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
                 <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
                 <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
                 <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
@@ -52,10 +52,10 @@
         </nav>
     </div>
     <div class="row main-display">
-        <div class="col m4 hide-on-small-only topictitle topic">
-            <div class="topTopic">อาชีพและความเป็นอยู่</div>
+        <div class="col m3 hide-on-small-only topictitle topic valign-wrapper">
+            <div class="topTopic rotate-270" style="margin: 3px;">อาชีพและความเป็นอยู่</div>
         </div>
-        <div class="col s12 m8 offset-m4 content-Container white-text">
+        <div class="col s12 m9 offset-m3 content-Container white-text">
             <!--Your Contents Here-->
             <div class="col l6" style="padding: 30px;">
                 <img class="responsive-img topimage" src="image/10.jpg">
@@ -123,11 +123,37 @@
         //set title div to fit display height
         window_size = $(window).height();
         $('.topictitle').height(window_size - 64);
+        //enable carousel
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+            indicators: false,
+            duration: 400
+        });
+        //set height of carousel respect to display height
+        $('.carousel').height(window_size - 64);
+        //use button to move carousel panel
+        function nextpanel(direction) {
 
+            if (direction == 1) {
+                $('.carousel.carousel-slider').carousel('prev');
+            } else {
+                $('.carousel.carousel-slider').carousel('next');
+            }
+        }
+        //test on screen resize function
+        $(window).resize(function () {
+            window_size = $(window).height();
+            $('.carousel').height(window_size - 64);
+            $('.topictitle').height(window_size - 64);
+        });
+        //enable carousel cycle
+        window.setInterval(function () {
+                nextpanel(-1);
+            }, 4000);
         //toggle grayscale
-        $('#myBtn').click(function(){
-                $('body').toggleClass('bw');
-            })
+        $('#myBtn').click(function () {
+            $('body').toggleClass('bw');
+        })
     </script>
 </body>
 
