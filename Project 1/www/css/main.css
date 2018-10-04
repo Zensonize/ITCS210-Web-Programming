@@ -60,3 +60,7 @@ ul.slides {
     padding-top: 50%;
     padding-bottom: 50%;
 }
+
+.bw {
+    filter: saturate(0);
+}
