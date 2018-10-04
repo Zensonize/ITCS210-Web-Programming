@@ -128,12 +128,12 @@
                 $('.carousel').height(window_size - 64);
                 $('.topictitle').height(window_size - 64);
             });
+            //enable carousel cycle
             window.setInterval(function () {
                 nextpanel(-1);
             }, 4000);
 
-
-            //
+            //toggle grayscale
             $('#myBtn').click(function(){
                 $('body').toggleClass('bw');
             })
