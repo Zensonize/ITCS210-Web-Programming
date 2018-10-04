@@ -26,6 +26,7 @@
 /* style the main content section */
 .content-Container {
     background-color: #212121;
+    margin-bottom: 0%;
 }
 
 .centered {
@@ -36,22 +37,53 @@
     z-index: 9999;
 }
 
-html,body{
-    
-    margin: 0;
-    padding: 0;
+.text{
+    display: inline;
 }
 
-.row {
-    margin: 0%;
+/* style for topic in each page */
+.topTopic{
+    padding-top: 60px;
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    color: white;
 }
 
-ul.slides {
-    
-    margin: 0px;
+/* style for sub topic in colum2 */
+.topicSub{
+    display: block; 
+    margin-top: 50px;
+    font-size: 50px;
 }
-.col {
-    padding: 0px;
+
+/* style for content in colum2 */
+.content{
+    background-color: black; 
+    color: white;
+}
+
+/* style for sub content in colum2 */
+.contentSub1{
+    margin-top: 30px;
+    font-size: 25px;
+    position: relative;
+}
+
+/* style for sub content in colum2 (smaller) */
+.contentSub2{
+    font-size: 16px;
+}
+
+/* apply with row */
+.main-display{
+    margin-bottom: 0%;
+}
+
+/* style for eacg images in column2 */
+.topimage{
+    margin-top: 30px;
+    align-items: center;
 }
 
 .slider_wrapper {
