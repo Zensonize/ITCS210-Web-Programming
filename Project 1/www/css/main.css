@@ -64,3 +64,7 @@ ul.slides {
 .bw {
     filter: saturate(0);
 }
+
+.rotate-270 {
+    transform: rotate(-90deg);
+}
