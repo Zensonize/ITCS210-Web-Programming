@@ -21,7 +21,7 @@
             <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
             <ul>
                 <li><a href="#" class="btn-floating yellow btn-large"  id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
-                <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
+                <li><a href="#" class="btn-floating blue btn-large" id="ActivateLargeText"><i class="large material-icons">format_size</i></a></li>
                 <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
                 <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
             </ul>
@@ -73,8 +73,36 @@
 
         //toggle grayscale
         $('#myBtn').click(function(){
-                $('body').toggleClass('bw');
-            })
+            $('body').toggleClass('bw');
+        })
+
+        //toggle large font
+        var largeFont_toggle = false;
+
+        $('#ActivateLargeText').click(function(){
+            $('h4').toggleClass('large-font');
+            $('h5').toggleClass('large-font');
+            $('h6').toggleClass('large-font');
+            $('p').toggleClass('large-font');
+            console.log(largeFont_toggle)
+            if(largeFont_toggle == false){
+                $('.content-Container').height($('#contentscontainer').height());
+                console.log("activate" + $('#contentscontainer').height())
+                console.log("activate" + $('.content-Container').height())
+                largeFont_toggle = true;
+            }
+            else{
+                if($('#contentscontainer').height() > $(window).height()){
+                    $('.content-Container').height($('#contentscontainer').height());
+                }
+                else{
+                    $('.content-Container').height(window_size - $('.navbar-fixed').height());
+                }
+                console.log("deactivate" + $('#contentscontainer').height())
+                console.log("deactivate" + $('.content-Container').height())
+                largeFont_toggle = false;
+            }
+        });
     </script>
 </body>
 

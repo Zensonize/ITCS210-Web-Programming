@@ -21,7 +21,7 @@
             <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
             <ul>
                 <li><a href="#" class="btn-floating yellow btn-large"  id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
-                <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
+                <li><a href="#" class="btn-floating blue btn-large" id="ActivateLargeText"><i class="large material-icons">format_size</i></a></li>
                 <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
                 <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
             </ul>
@@ -51,13 +51,13 @@
             </div>
         </nav>
     </div>
-    <div class="row">
+    <div class="row main-display">
         <div class="col m4 hide-on-small-only topictitle">
-
+            <div class="topTopic">ประวัติความเป็นมา</div>
         </div>
         <div class="col s12 m8 offset-m4 content-Container">
             <!--Your Contents Here-->
-            <div class="container white-text">
+            <div class="container white-text" id="contentscontainer">
                 <div class="row">
                     <div class="col s12 m12 l12">
                         <p><span>เมื่อ 3600 ปี</span>ที่แล้ว ชาวกะยันได้อาศัยอยู่บริเวณมองโกเลีย โดยอยู่ในมณฑลยูนนาน ของประเทศจีน แล้วอพยพลงมาอยู่ที่รัฐคะยาของประเทศพม่า</p>
@@ -94,18 +94,61 @@
 
     <script>
         $(".button-collapse").sideNav();
+
         //enable navbar dropdown on hover
         $('.dropdown-button').dropdown({
             'hover': true
         });
+
         //set title div to fit display height
         window_size = $(window).height();
         $('.topictitle').height(window_size - 64);
         $('.content-Container').height(window_size -64);
+
+        //resize container size when screen resize
+        $(window).resize(function () {
+                window_size = $(window).height();
+                $('.topictitle').height(window_size - $('.navbar-fixed').height());
+                if($('#contentscontainer').height() > window_size) {
+                    $('.content-Container').height($('#contentscontainer').height())
+                }
+                else{
+                    $('.content-Container').height(window_size - $('.navbar-fixed').height());
+                }
+        });
+
         //toggle grayscale
         $('#myBtn').click(function(){
                 $('body').toggleClass('bw');
-            })
+        })
+
+        //toggle large font
+        var largeFont_toggle = false;
+
+        $('#ActivateLargeText').click(function(){
+            $('h4').toggleClass('large-font');
+            $('h5').toggleClass('large-font');
+            $('h6').toggleClass('large-font');
+            $('p').toggleClass('large-font');
+            console.log(largeFont_toggle)
+            if(largeFont_toggle == false){
+                $('.content-Container').height($('#contentscontainer').height());
+                console.log("activate" + $('#contentscontainer').height())
+                console.log("activate" + $('.content-Container').height())
+                largeFont_toggle = true;
+            }
+            else{
+                if($('#contentscontainer').height() > $(window).height()){
+                    $('.content-Container').height($('#contentscontainer').height());
+                }
+                else{
+                    $('.content-Container').height(window_size - $('.navbar-fixed').height());
+                }
+                console.log("deactivate" + $('#contentscontainer').height())
+                console.log("deactivate" + $('.content-Container').height())
+                largeFont_toggle = false;
+            }
+        });
     </script>
 </body>
 

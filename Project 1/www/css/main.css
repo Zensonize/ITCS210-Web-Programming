@@ -100,3 +100,8 @@
 .rotate-270 {
     transform: rotate(-90deg);
 }
+
+/* Scale up font size when scale is activated */
+.large-font {
+    font-size: 200% !important
+}
