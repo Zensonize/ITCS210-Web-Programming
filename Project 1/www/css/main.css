@@ -26,9 +26,15 @@
 /* style the main content section */
 .content-Container {
     background-color: #212121;
+    color: white;
     margin-bottom: 0%;
 }
 
+/* style for content in colum2 */
+.content{
+    background-color: white; 
+    color:black;
+}
 .centered {
     position: absolute;
     top: 40%;
@@ -55,11 +61,7 @@
     font-size: 50px;
 }
 
-/* style for content in colum2 */
-.content{
-    background-color: grey darken-4; 
-    color: white;
-}
+
 
 /* style for sub content in colum2 */
 .contentSub1{
@@ -82,6 +84,8 @@
 .topimage{
     margin-top: 30px;
     align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .slider_wrapper {

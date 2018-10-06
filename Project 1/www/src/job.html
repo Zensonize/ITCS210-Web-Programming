@@ -55,7 +55,7 @@
         <div class="col m3 hide-on-small-only topictitle topic valign-wrapper">
             <div class="topTopic rotate-270" style="margin: 3px;">อาชีพและความเป็นอยู่</div>
         </div>
-        <div class="col s12 m9 offset-m3 content-Container white-text">
+        <div class="col s12 m9 offset-m3 content-Container">
             <!--Your Contents Here-->
             <div class="col l6" style="padding: 30px;">
                 <img class="responsive-img topimage" src="image/10.jpg">
@@ -83,7 +83,12 @@
                 </p>
             </div>
             <div class="col l6" style="padding: 30px;">
-                <img class="responsive-img topimage" src="image/17.jpg">
+
+                <div class="container valign-center">
+                     <img class="responsive-img topimage" src="image/17.jpg">
+                </div>
+               
+
                 <p class="text">
                     <div class="contentSub1 ">บทบาทของหญิง-ชายในพม่า</div><br>
                     <div class="contentSub2">
@@ -96,7 +101,10 @@
             </div>
 
             <div class="col l6" style="padding: 30px;">
-                <img class="responsive-img topimage" src="image/18.jpg">
+                <div class="container">
+                    <img class="responsive-img topimage" src="image/33.jpg">
+                </div>
+                
                 <p class="text">
                     <div class="contentSub1 ">ชาวกะยันในไทย</div><br>
                     <div class="contentSub2">
@@ -148,8 +156,8 @@
         });
         //enable carousel cycle
         window.setInterval(function () {
-                nextpanel(-1);
-            }, 4000);
+            nextpanel(-1);
+        }, 4000);
         //toggle grayscale
         $('#myBtn').click(function () {
             $('body').toggleClass('bw');

@@ -20,7 +20,7 @@
         <div class="fixed-action-btn">
             <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
             <ul>
-                <li><a href="#" class="btn-floating yellow btn-large"  id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
+                <li><a href="#" class="btn-floating yellow btn-large" id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
                 <li><a href="#" class="btn-floating blue btn-large"><i class="large material-icons">format_quote</i></a></li>
                 <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
                 <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
@@ -53,14 +53,16 @@
     </div>
     <div class="row main-display">
         <div class="col m3 hide-on-small-only topictitle valign-wrapper">
-            <div class="topTopic rotate-270 center-align" style="padding: 0px">
+            <div class="topTopic rotate-270" style="padding-inline-end: 10px">
                 โครงสร้างทางสังคม</div>
         </div>
-        <div class="col s12 m9 offset-m3 content-Container content" >
+        <div class="col s12 m9 offset-m3 content-Container">
             <!--Your Contents Here-->
+            <hr width="60%">
             <p class="topicSub center-align">ครอบครัว</p>
+            <hr width="60%">
             <div class="col l6" style="padding: 30px;">
-               <img class="responsive-img" src="image/1.jpg">
+                <div class="container" valign-center><img class="responsive-img" src="image/1.jpg"></div>
                 <p class="text">
                     <div class="contentSub1">การแต่งงาน</div><br>
                     <div class="contentSub2">ชาวกะเหรี่ยงแต่งงานตอนอายุน้อยทั้งสองฝ่ายต้องทำการสัญญาว่า
@@ -71,7 +73,7 @@
 
             </div>
             <div class="col l6" style="padding: 30px;">
-                <img class="responsive-img" src="image/6.jpg">
+                <div class="container" valign-center"><img class="responsive-img" src="image/6.jpg"></div>
                 <p class="text">
                     <div class="contentSub1 ">การหย่าร้าง</div><br>
                     <div class="contentSub2">
@@ -82,7 +84,7 @@
                 </p>
             </div>
             <div class="col l12" style="padding: 30px;">
-                <img class="responsive-img" src="image/3.jpg">
+                <div class="container" valign-center><img class="responsive-img" src="image/3.jpg"></div>
                 <p class="text">
                     <div class="contentSub1">การมีลูก</div><br>
                     <div class="contentSub2">เมื่อมีลูกคนแรกออกมาจะมีคุณย่าคุณยายที่ทำคลอดให้แต่ลูกคนสองอาจ<br>เป็นบิดาหรือหมอตำแหยที่ทำคลอดให้
@@ -91,9 +93,13 @@
             </div>
 
             <div class="col l12" style="padding: 30px;">
+                <hr width="60%">
                 <p class="topicSub center-align">หมู่บ้าน</p>
+                <hr width="60%">
                 <div class="col l6" style="padding: 30px;">
+
                     <img class="responsive-img" src="image/11.jpg">
+
                     <p class="text">
                         <div class="contentSub1">ในพม่า</div><br>
                         <div class="contentSub2">หมู่บ้านชาวกะยันมีความอิสระมากๆ
@@ -105,40 +111,42 @@
                     </p>
                 </div>
                 <div class="col l6" style="padding: 30px;">
-                    <img class="responsive-img" src="image/13.jpg">
-                    <p class="text">
-                        <div class="contentSub1">ในไทย</div><br>
-                        <div class="contentSub2">การปกครองของชาวกะยันในไทยจะมีความตล้ายคลึงกับการปกครองในพม่า
-                            เมื่อมีการทะเลาะกันหรือมีเรื่องเดือดร้อน
-                            ผู้ใหญ่บ้านจะรายงานให้ประธานทราบและชาวกะยันทุกคนต้องทำตามกฎที่
-                            เขียนใส่กระดาษไรเนียวทุกประการ</div>
-                    </p>
+                   
+                        <img class="responsive-img" src="image/13.jpg">
+                        
+                        <p class="text">
+                            <div class="contentSub1">ในไทย</div><br>
+                            <div class="contentSub2">การปกครองของชาวกะยันในไทยจะมีความตล้ายคลึงกับการปกครองในพม่า
+                                เมื่อมีการทะเลาะกันหรือมีเรื่องเดือดร้อน
+                                ผู้ใหญ่บ้านจะรายงานให้ประธานทราบและชาวกะยันทุกคนต้องทำตามกฎที่
+                                เขียนใส่กระดาษไรเนียวทุกประการ</div>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-    <script>
-        $(".button-collapse").sideNav();
-        //enable navbar dropdown on hover
-        $('.dropdown-button').dropdown({
-            'hover': true
-        });
-        //set title div to fit display height
-        window_size = $(window).height();
-        $('.topictitle').height(window_size - 64);
-        //enable carousel
-        $('.carousel.carousel-slider').carousel({
+        <script>
+            $(".button-collapse").sideNav();
+            //enable navbar dropdown on hover
+            $('.dropdown-button').dropdown({
+                'hover': true
+            });
+            //set title div to fit display height
+            window_size = $(window).height();
+            $('.topictitle').height(window_size - 64);
+            //enable carousel
+            $('.carousel.carousel-slider').carousel({
                 fullWidth: true,
                 indicators: false,
                 duration: 400
             });
-         //set height of carousel respect to display height
-         $('.carousel').height(window_size - 64);
+            //set height of carousel respect to display height
+            $('.carousel').height(window_size - 64);
             //use button to move carousel panel
             function nextpanel(direction) {
 
@@ -148,22 +156,22 @@
                     $('.carousel.carousel-slider').carousel('next');
                 }
             }
-        //test on screen resize function
-        $(window).resize(function () {
+            //test on screen resize function
+            $(window).resize(function () {
                 window_size = $(window).height();
                 $('.carousel').height(window_size - 64);
                 $('.topictitle').height(window_size - 64);
             });
-        //enable carousel cycle
-        window.setInterval(function () {
+            //enable carousel cycle
+            window.setInterval(function () {
                 nextpanel(-1);
             }, 4000);
 
-        //toggle grayscale
-        $('#myBtn').click(function(){
+            //toggle grayscale
+            $('#myBtn').click(function () {
                 $('body').toggleClass('bw');
             })
-    </script>
+        </script>
 </body>
 
 </html>
