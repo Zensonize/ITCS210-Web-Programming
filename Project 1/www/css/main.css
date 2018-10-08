@@ -16,7 +16,7 @@
     
 } 
 .dropdown-content {
-    background-color: #000000;
+    background-color: #212121;
 }
 
 .dropdown-content li a {
@@ -44,7 +44,7 @@ html,body{
     
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #212121;
 }
 
 .row {
@@ -65,3 +65,24 @@ ul.slides {
     padding-top: 50%;
     padding-bottom: 50%;
 }
+
+
+.centered_home-small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.center_heading {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#profile-img img{
+    border-radius: 50%;
+}      
