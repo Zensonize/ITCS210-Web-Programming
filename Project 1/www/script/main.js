@@ -1,5 +1,6 @@
 $(document).ready(function(){
   resizeScreen();
+  resizeLogo();
 })
 
 $(".button-collapse").sideNav();
@@ -12,6 +13,7 @@ $('.dropdown-button').dropdown({
 //resize container size when screen resize
 $(window).resize(function () {
   resizeScreen();
+  resizeLogo();
 });
 
 //resize screen respect to the content height
@@ -27,6 +29,11 @@ function resizeScreen(){
   }
 }
 
+//resize logo
+function resizeLogo(){
+  var navsize = $('.navbar-fixed').height();
+  $('#logo').height(navsize-5);
+}
 //toggle grayscale button
 $('#ActivateGrayScale').click(function(){
   $('body').toggleClass('bw');
@@ -36,10 +43,10 @@ $('#ActivateGrayScale').click(function(){
 var largeFont_toggle = false;
 
 $('#ActivateLargeText').click(function(){
-    $('h4').toggleClass('large-font');
-    $('h5').toggleClass('large-font');
-    $('h6').toggleClass('large-font');
-    $('p').toggleClass('large-font');
+    $('.topicSub').toggleClass('topicSub-large');
+    $('.contentSub1').toggleClass('contentSub1-large');
+    $('.contentSub2').toggleClass('contentSub2-large');
+    $('.p').toggleClass('large-font');
     console.log(largeFont_toggle)
     if(largeFont_toggle == false){
         resizeScreen();

@@ -14,7 +14,7 @@
     <title>หน้าแรก</title>
 </head>
 
-<body>
+<body style="overflow:hidden;">
     <div class="container" style="width: 100%;">
         <!-- FIXED ACTION BUTTON -->
         <div class="fixed-action-btn">
@@ -42,7 +42,7 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper black lighten-1">
-                <a href="home.html" class="brand-logo left">Logo</a>
+                <a href="home.html" class="brand-logo left"><img src="../img/MULogo.png" id="logo"></a>
                 <ul id="nav-mobile" class="right hide-on-small-only">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="" class="dropdown-button" data-activates="dropdown-nav">Topics<i class="material-icons right">arrow_drop_down</i></a></li>
@@ -53,56 +53,40 @@
     </div>
 
     <!--home Content Here-->
+    <div class="row main-display">
+        <div class="col s12 m12 l12 content-Container homebg valign-wrapper">
+            <div class="container white-text">
+                <h1 class="right-align">ชนเผ่ากะยัน</h1>
+                <p class="right-align">ชนเผ่าที่มีความเป็นมายาวนานกว่า 300 ปี</p>
+            </div>
+        </div>
+        
+    </div>
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
+    <!-- import external Javascript -->
+    <script src="../script/main.js"></script>
     <script>
-        $(".button-collapse").sideNav();
-        //initialize Slider Card
-        $('.slider').slider();
-        //enable navbar dropdown on hover
-        $('.dropdown-button').dropdown({
-            'hover': true
-        });
-        //set title div to fit display height
-        window_size = $(window).height();
-        window_width = $(window).width();
-        $('.topictitle').height(window_size - 64);
-
-        //toggle grayscale
-        $('#myBtn').click(function(){
-            $('body').toggleClass('bw');
+        $(document).ready(function(){
+            resize();
         })
-
-        //toggle large font
-        var largeFont_toggle = false;
-
-        $('#ActivateLargeText').click(function(){
-            $('h4').toggleClass('large-font');
-            $('h5').toggleClass('large-font');
-            $('h6').toggleClass('large-font');
-            $('p').toggleClass('large-font');
-            console.log(largeFont_toggle)
-            if(largeFont_toggle == false){
-                $('.content-Container').height($('#contentscontainer').height());
-                console.log("activate" + $('#contentscontainer').height())
-                console.log("activate" + $('.content-Container').height())
-                largeFont_toggle = true;
-            }
-            else{
-                if($('#contentscontainer').height() > $(window).height()){
-                    $('.content-Container').height($('#contentscontainer').height());
-                }
-                else{
-                    $('.content-Container').height(window_size - $('.navbar-fixed').height());
-                }
-                console.log("deactivate" + $('#contentscontainer').height())
-                console.log("deactivate" + $('.content-Container').height())
-                largeFont_toggle = false;
-            }
+        $(window).resize(function () {
+            resize();
         });
+        
+        function resize(){
+            var window_size = $(window).height();
+            var window_width = $(window).width();
+            var contentScreen_size = window_size - $('.navbar-fixed').height();
+            $('.homebg').height(contentScreen_size);
+            $('.homebg').width(window_width);
+            $('.homebg').css("background-size", "cover " + "cover");
+            $('.homebg').css("background-size", "cover " + "cover");
+            $('.homebg').css("background-position-x", ((1920/window_width)*13)-1 + "%");
+        }
     </script>
 </body>
 

@@ -68,8 +68,30 @@
 }
 
 /* style for sub content in colum2 (smaller) */
-.contentSub2{
-    font-size: 16px;
+.contentSub2-large{
+    font-size: 21px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.topicSub-large{
+    display: block; 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 60px;
+}
+
+/* style for sub content in colum2 */
+.contentSub1-large{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 30px;
+    position: relative;
+}
+
+/* style for sub content in colum2 (smaller) */
+.contentSub2-large{
+    font-size: 21px;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -97,4 +119,13 @@
 /* Scale up font size when scale is activated */
 .large-font {
     font-size: 200% !important
+}
+
+.homebg{
+    background-image: url("../img/background.jpg");
+    background-size: cover cover
+}
+
+#logo{
+    margin-left: 10px;
 }
