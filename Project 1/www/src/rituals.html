@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css/main.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
     <title>ประเพณี - พิธีกรรม</title>
 </head>
 
@@ -20,7 +19,7 @@
         <div class="fixed-action-btn">
             <a href="#" class="btn-floating red btn-large"><i class="large material-icons">mode_edit</i></a>
             <ul>
-                <li><a href="#" class="btn-floating yellow btn-large"  id="myBtn"><i class="large material-icons">invert_colors</i></a></li>
+                <li><a href="#" class="btn-floating yellow btn-large"  id="ActivateGrayScale"><i class="large material-icons">invert_colors</i></a></li>
                 <li><a href="#" class="btn-floating blue btn-large" id="ActivateLargeText"><i class="large material-icons">format_size</i></a></li>
                 <li><a href="#" class="btn-floating green btn-large"><i class="large material-icons">publish</i></a></li>
                 <li><a href="#" class="btn-floating orange btn-large"><i class="large material-icons">attach_file</i></a></li>
@@ -51,13 +50,13 @@
             </div>
         </nav>
     </div>
-    <div class="row" id="contentscontainer">
-        <div class="col m4 hide-on-small-only topictitle">
-
+    <div class="row main-display">
+        <div class="col m3 hide-on-small-only topictitle valign-wrapper">
+            <h1 class="topTopic rotate-270" style="padding-top: 43px">ประเพณีและพิธีกรรม</h1>
         </div>
-        <div class="col s12 m8 offset-m4 content-Container">
+        <div class="col s12 m9 offset-m3 content-Container content">
             <!--Your Contents Here-->
-            
+
         </div>
     </div>
 
@@ -65,62 +64,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-    <script>
-        $(".button-collapse").sideNav();
-
-        //enable navbar dropdown on hover
-        $('.dropdown-button').dropdown({
-            'hover': true
-        });
-
-        //set title div to fit display height
-        window_size = $(window).height();
-        $('.topictitle').height(window_size - 64);
-
-        //toggle grayscale
-        $('#myBtn').click(function(){
-                $('body').toggleClass('bw');
-        })
-
-        //resize container size when screen resize
-        $(window).resize(function () {
-            window_size = $(window).height();
-            $('.topictitle').height(window_size - $('.navbar-fixed').height());
-            if ($('#contentscontainer').height() > window_size) {
-                $('.content-Container').height($('#contentscontainer').height())
-            } else {
-                $('.content-Container').height(window_size - $('.navbar-fixed').height());
-            }
-        });
-
-        //toggle large font
-        var largeFont_toggle = false;
-
-        $('#ActivateLargeText').click(function(){
-            $('h4').toggleClass('large-font');
-            $('h5').toggleClass('large-font');
-            $('h6').toggleClass('large-font');
-            $('p').toggleClass('large-font');
-            console.log(largeFont_toggle)
-            if(largeFont_toggle == false){
-                $('.content-Container').height($('#contentscontainer').height());
-                console.log("activate" + $('#contentscontainer').height())
-                console.log("activate" + $('.content-Container').height())
-                largeFont_toggle = true;
-            }
-            else{
-                if($('#contentscontainer').height() > $(window).height()){
-                    $('.content-Container').height($('#contentscontainer').height());
-                }
-                else{
-                    $('.content-Container').height(window_size - $('.navbar-fixed').height());
-                }
-                console.log("deactivate" + $('#contentscontainer').height())
-                console.log("deactivate" + $('.content-Container').height())
-                largeFont_toggle = false;
-            }
-        });
-    </script>
+    <!-- import external Javascript -->
+    <script src="../script/main.js"></script>
 </body>
 
 </html>

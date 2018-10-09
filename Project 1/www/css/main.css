@@ -21,12 +21,13 @@
 .topictitle {
     position: fixed;
     background-color: #424242;
+    padding: 0%;
 }
 
-/* style the main content section */
-.content-Container {
-    background-color: #212121;
-    margin-bottom: 0%;
+/* style for content in colum2 */
+.content{
+    background-color: white; 
+    color:black;
 }
 
 .centered {
@@ -43,29 +44,25 @@
 
 /* style for topic in each page */
 .topTopic{
-    padding-top: 60px;
-    display: block;
-    font-size: 50px;
+    font-size: 35px;
     text-align: center;
     color: white;
+    float: left;
+    outline-offset: 10%;
 }
 
 /* style for sub topic in colum2 */
 .topicSub{
     display: block; 
-    margin-top: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-size: 50px;
-}
-
-/* style for content in colum2 */
-.content{
-    background-color: black; 
-    color: white;
 }
 
 /* style for sub content in colum2 */
 .contentSub1{
-    margin-top: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-size: 25px;
     position: relative;
 }
@@ -73,17 +70,13 @@
 /* style for sub content in colum2 (smaller) */
 .contentSub2{
     font-size: 16px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /* apply with row */
 .main-display{
     margin-bottom: 0%;
-}
-
-/* style for eacg images in column2 */
-.topimage{
-    margin-top: 30px;
-    align-items: center;
 }
 
 .slider_wrapper {
