@@ -52,34 +52,91 @@
             </div>
         </nav>
     </div>
-    <div class="row">
-        <div class="col m4 hide-on-small-only topictitle">
+    <div class="row main-display">
+        <div class="col m3 hide-on-small-only topictitle valign-wrapper">
 
         </div>
-        <div class="col s12 m8 offset-m4 content-Container">
+        <div class="col s12 m9 offset-m3 content-Block black white-text">
             <!--Your Contents Here-->
+            <div class="container" id="contentscontainer">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <br><hr>
+                        <div class="topicSub">Contacts info</div>
+                        <hr><br>
+                    </div>
+                    <div class="col s4 m4 l4">
+                        <img class="responsive-img" src="../img/raccoon1.png"/>
+                    </div>
+                    <div class="col s8 m8 l8">
+                            Name: Krittamet	Kiattikulwattana<br>
+                            ID: 6088063<br>
+                            Section: 1<br>
+                            Faculty: Information and Communication Technology (ICT) , Mahidol University
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col s4 m4 l4">
+                            <img class="responsive-img" src="../img/raccoon1.png"/>
+                        </div>
+                        <div class="col s8 m8 l8">
+                            Name: Supakarn Wongnil<br>
+                            ID: 6088137<br>
+                            Section: 1<br>
+                            Faculty: Information and Communication Technology (ICT) , Mahidol University
+                        </div>
+                </div>
+                <div class="row">
+                        <div class="col s4 m4 l4">
+                            <img class="responsive-img" src="../img/raccoon1.png"/>
+                        </div>
+                        <div class="col s8 m8 l8">
+                            Name: Thanadol Lerdsakcharoenkul<br>
+                            ID: 6088055<br>
+                            Section: 1<br>
+                            Faculty: Information and Communication Technology (ICT) , Mahidol University
+                        </div>
+                </div>
+            </div>
             
         </div>
     </div>
+    <div class="row main-display">
+        <div class="col s12 m9 l9 offset-m3 offset-l3 main-footer">
+                <footer class="page-footer blue-grey darken-4 white-text">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col s5 m5 l5">
+                              <img class="responsive-img" src="../img/museum-logo.png"/> 
+                            </div>
+                            <div class="col s7 m7 l7">
+                                <br>
+                              <div class="contentSub2">
+                                    4 SANAM CHAI ROAD, PRA BAROM MAHA RAJAWANG PRANAKORN DISTRICT,BANGKOK 10200<br>
+                                    TEL : 02 225 2777 FAX : 02 225 2775<br>
+                                    E-MAIL : WEBMASTER@MUSEUMTHAILAND.COM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="footer-copyright">
+                          <div class="container">
+                          © 2014 Copyright Text
+                          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                          </div>
+                        </div>
+                      </footer>
+        </div>
+    </div>
+    
+    
 
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
-    <script>
-        $(".button-collapse").sideNav();
-        //enable navbar dropdown on hover
-        $('.dropdown-button').dropdown({
-            'hover': true
-        });
-        //set title div to fit display height
-        window_size = $(window).height();
-        $('.topictitle').height(window_size - 64);
-        //toggle grayscale
-        $('#myBtn').click(function(){
-                $('body').toggleClass('bw');
-        })
-    </script>
+    <!-- import external Javascript -->
+    <script src="../script/main.js"></script>
 </body>
 
 </html>

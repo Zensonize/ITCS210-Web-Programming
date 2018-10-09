@@ -129,3 +129,8 @@
 #logo{
     margin-left: 10px;
 }
+
+.main-footer{
+    padding: 0px !important; 
+    margin-bottom: 0% !important;
+}
