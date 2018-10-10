@@ -46,7 +46,6 @@ $('#ActivateLargeText').click(function(){
     $('.topicSub').toggleClass('topicSub-large');
     $('.contentSub1').toggleClass('contentSub1-large');
     $('.contentSub2').toggleClass('contentSub2-large');
-    $('.p').toggleClass('large-font');
     console.log(largeFont_toggle)
     if(largeFont_toggle == false){
         resizeScreen();
