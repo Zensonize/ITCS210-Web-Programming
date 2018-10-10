@@ -124,6 +124,8 @@
         <script src="../script/main.js"></script>
         
         <script>
+            //automatically start the carousel cycle when the document ready
+            startInterval();
             //set title div to fit display height
             window_size = $(window).height();
             $('.topictitle').height(window_size - 64);
@@ -139,8 +141,12 @@
             function nextpanel(direction) {
                 if (direction == -1) {
                     $('.carousel.carousel-slider').carousel('prev');
+                    terminateInterval();
+                    startInterval();
                 } else {
                     $('.carousel.carousel-slider').carousel('next');
+                    terminateInterval();
+                    startInterval();
                 }
             }
             //test on screen resize function
@@ -163,9 +169,16 @@
             }
 
             //enable carousel cycle
-            window.setInterval(function () {
-                nextpanel(1);
-            }, 10000);
+            var intervalHandler;
+            function startInterval(){
+                intervalHandler = window.setInterval(function(){
+                    nextpanel(1);
+                }, 10000);
+            }
+            function terminateInterval(){
+                window.clearInterval(intervalHandler);
+            }
+            
 
         </script>
 </body>
